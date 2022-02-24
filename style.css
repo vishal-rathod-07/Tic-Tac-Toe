@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eceff1;
+  /* color: rgb(104, 102, 102); */
+  color: #37474f !important;
+}
+
+.container {
+  background-color: white;
+  width: 506px;
+  padding: 50px 0 80px;
+  margin: 25px auto;
+  box-shadow: 6px 3px 6px 6px #cfd8dc;
+}
+
+.heading {
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0 15px 0;
+  letter-spacing: 2px;
+}
+
+.board {
+  display: flex;
+  width: 306px;
+  height: 306px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 98px;
+  height: 98px;
+  background-color: #90a4ae;
+  border-radius: 10px;
+  margin: 2px;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  line-height: 98px;
+  cursor: pointer !important;
+}
+
+.square:hover {
+  cursor: pointer;
+  background-color: #78909c;
+}
+
+button {
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  color: #37474f;
+}
+
+button:hover {
+  background-color: #d1d9e2;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.player-one {
+  background-color: rgb(235, 106, 106);
+}
+
+.player-two {
+  background-color: rgb(84, 146, 228);
+}
+
+.player-one:hover {
+  cursor: initial;
+  background-color: rgb(235, 106, 106);
+}
+
+.player-two:hover {
+  cursor: initial;
+  background-color: rgb(84, 146, 228);
+}
+
+.message {
+  text-align: center;
+}
+
+.game-over {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ec8484;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.reset-button {
+  text-align: center;
+  margin-top: 10px;
+}
