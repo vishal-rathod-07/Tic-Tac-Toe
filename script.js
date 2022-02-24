@@ -69,14 +69,16 @@ function checkForWinner() {
       currentBoard[winningCombinations[i][1]] === "X" &&
       currentBoard[winningCombinations[i][2]] === "X"
     ) {
-      message.innerHTML = "Player One wins 🙌";
+      message.innerHTML = "Player One wins 👑";
+      message.style.color = "rgb(235, 106, 106)";
       gameOver = true;
     } else if (
       currentBoard[winningCombinations[i][0]] === "O" &&
       currentBoard[winningCombinations[i][1]] === "O" &&
       currentBoard[winningCombinations[i][2]] === "O"
     ) {
-      message.innerHTML = "Player Two wins 🙌";
+      message.innerHTML = "Player Two wins 👑";
+      message.style.color = "rgb(84, 146, 228)";
       gameOver = true;
     }
   }
