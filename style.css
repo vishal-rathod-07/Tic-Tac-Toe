@@ -1,32 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #eceff1;
-  color: #37474f !important;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  height: 100vh;
+  color: #333 !important;
   font-size: 1.2rem;
   line-height: 1.5;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .container {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
   width: 506px;
   padding: 50px 0 80px;
   margin: 25px auto;
-  box-shadow: 6px 3px 6px 6px #cfd8dc;
+  box-shadow: 0 3rem 5rem rgb(0 0 0 / 25%);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .heading {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
   margin: 30px 0 15px 0;
@@ -46,10 +52,10 @@ body {
 .square {
   width: 98px;
   height: 98px;
-  background-color: #90a4ae;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   margin: 2px;
-  color: #fff;
   font-size: 50px;
   line-height: 98px;
   cursor: pointer !important;
@@ -57,58 +63,47 @@ body {
 
 .square:hover {
   cursor: pointer;
-  background-color: #78909c;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 button {
   border-radius: 5px;
+  width: 100px;
+  font-size: 15px;
+  font-weight: bold;
   padding: 10px;
   border: none;
-  color: #37474f;
+  color: #fff;
+  background-color: #c7365f;
+  letter-spacing: 2px;
 }
 
 button:hover {
-  background-color: #d1d9e2;
+  background-color: #fff;
+  color: #c7365f;
   cursor: pointer;
   box-shadow: none;
 }
 
 .player-one {
-  background-color: rgb(235, 106, 106);
+  color: rgb(235, 106, 106);
 }
 
 .player-two {
-  background-color: rgb(84, 146, 228);
-}
-
-.player-one:hover {
-  cursor: initial;
-  background-color: rgb(235, 106, 106);
-}
-
-.player-two:hover {
-  cursor: initial;
-  background-color: rgb(84, 146, 228);
+  color: rgb(84, 146, 228);
 }
 
 .message {
   text-align: center;
+  color: #fff;
 }
 
 .game-over {
   font-size: 25px;
   font-weight: bold;
-  background: linear-gradient(rgb(235, 106, 106), rgb(84, 146, 228));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff;
   margin: 30px 0;
 }
-/* font-size: 20px;
-  font-weight: bold;
-  color: #ec8484;
-  text-align: center;
-  margin: 30px 0;
-} */
 
 .reset-button {
   text-align: center;

@@ -32,13 +32,11 @@ squares.forEach((square) => {
     if (e.target.innerHTML !== "") return;
     if (turns % 2 === 0) {
       message.innerHTML = "Player Two's turn: 𝕆";
-      message.style.color = blue;
       e.target.classList.add("player-one");
       e.target.innerHTML = "X";
       currentBoard[e.target.dataset.squareId] = "X";
     } else {
       message.innerHTML = "Player One's turn: 𝕏";
-      message.style.color = red;
       e.target.classList.add("player-two");
       e.target.innerHTML = "O";
       currentBoard[e.target.dataset.squareId] = "O";
@@ -52,7 +50,6 @@ squares.forEach((square) => {
 function checkForWinner() {
   if (turns === 9 && !gameOver) {
     message.innerHTML = "It's a draw 🤷‍♀️";
-    message.style.color = "rgb(136, 108, 228)";
     gameOver = true;
   }
 
@@ -64,11 +61,9 @@ function checkForWinner() {
     if (squareOne === squareTwo && squareTwo === squareThree) {
       if (squareOne === "X") {
         message.innerHTML = "Player One wins 👑";
-        message.style.color = red;
         gameOver = true;
       } else if (squareOne === "O") {
         message.innerHTML = "Player Two wins 👑";
-        message.style.color = blue;
         gameOver = true;
       }
     }
@@ -85,7 +80,6 @@ function reset() {
   gameOver = false;
   currentBoard = [];
   message.innerHTML = "Player One's turn: 𝕏";
-  message.style.color = red;
   gameover.style.display = "none";
 
   squares.forEach((square) => {
