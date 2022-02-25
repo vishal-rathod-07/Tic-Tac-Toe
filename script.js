@@ -1,4 +1,3 @@
-const board = document.querySelector(".board");
 const message = document.querySelector(".message");
 const gameover = document.querySelector(".game-over");
 const resetBtn = document.querySelector("#reset");
@@ -33,7 +32,7 @@ squares.forEach((square) => {
     if (e.target.innerHTML !== "") return;
     if (turns % 2 === 0) {
       message.innerHTML = "Player Two's turn: 𝕆";
-      message.style.color = "rgb(84, 146, 228)";
+      message.style.color = blue;
       e.target.classList.add("player-one");
       e.target.innerHTML = "X";
       currentBoard[e.target.dataset.squareId] = "X";
@@ -69,7 +68,7 @@ function checkForWinner() {
         gameOver = true;
       } else if (squareOne === "O") {
         message.innerHTML = "Player Two wins 👑";
-        message.style.color = "rgb(84, 146, 228)";
+        message.style.color = blue;
         gameOver = true;
       }
     }
