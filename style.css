@@ -8,8 +8,10 @@
 
 body {
   background-color: #eceff1;
-  /* color: rgb(104, 102, 102); */
   color: #37474f !important;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .container {
@@ -18,13 +20,17 @@ body {
   padding: 50px 0 80px;
   margin: 25px auto;
   box-shadow: 6px 3px 6px 6px #cfd8dc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .heading {
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   margin: 30px 0 15px 0;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .board {
@@ -33,6 +39,8 @@ body {
   height: 306px;
   margin: 20px auto;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .square {
@@ -43,7 +51,6 @@ body {
   margin: 2px;
   color: #fff;
   font-size: 50px;
-  text-align: center;
   line-height: 98px;
   cursor: pointer !important;
 }
@@ -89,12 +96,19 @@ button:hover {
 }
 
 .game-over {
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  background: linear-gradient(rgb(235, 106, 106), rgb(84, 146, 228));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 30px 0;
+}
+/* font-size: 20px;
   font-weight: bold;
   color: #ec8484;
   text-align: center;
   margin: 30px 0;
-}
+} */
 
 .reset-button {
   text-align: center;
