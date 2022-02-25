@@ -31,12 +31,12 @@ squares.forEach((square) => {
     }
     if (e.target.innerHTML !== "") return;
     if (turns % 2 === 0) {
-      message.innerHTML = "Player Two's turn: 𝕆";
+      message.innerHTML = "Player Two's Turn: 𝕆";
       e.target.classList.add("player-one");
       e.target.innerHTML = "X";
       currentBoard[e.target.dataset.squareId] = "X";
     } else {
-      message.innerHTML = "Player One's turn: 𝕏";
+      message.innerHTML = "Player One's Turn: 𝕏";
       e.target.classList.add("player-two");
       e.target.innerHTML = "O";
       currentBoard[e.target.dataset.squareId] = "O";
@@ -58,14 +58,24 @@ function checkForWinner() {
     const squareTwo = currentBoard[combination[1]];
     const squareThree = currentBoard[combination[2]];
 
-    if (squareOne === squareTwo && squareTwo === squareThree) {
-      if (squareOne === "X") {
-        message.innerHTML = "Player One wins 👑";
-        gameOver = true;
-      } else if (squareOne === "O") {
-        message.innerHTML = "Player Two wins 👑";
-        gameOver = true;
-      }
+    if (squareOne === "X" && squareTwo === "X" && squareThree === "X") {
+      message.innerHTML = "Player One Wins 🎉";
+      winner();
+    } else if (squareOne === "O" && squareTwo === "O" && squareThree === "O") {
+      message.innerHTML = "Player Two Wins 🎉";
+      winner();
+    }
+    function winner() {
+      gameOver = true;
+      squares.forEach((square) => {
+        if (
+          square.dataset.squareId == combination[0] ||
+          square.dataset.squareId == combination[1] ||
+          square.dataset.squareId == combination[2]
+        ) {
+          square.classList.add("green");
+        }
+      });
     }
 
     if (gameOver) {
@@ -79,13 +89,13 @@ function reset() {
   turns = 0;
   gameOver = false;
   currentBoard = [];
-  message.innerHTML = "Player One's turn: 𝕏";
   gameover.style.display = "none";
 
   squares.forEach((square) => {
     square.innerHTML = "";
     square.classList.remove("player-one");
     square.classList.remove("player-two");
+    square.classList.remove("green");
   });
 }
 

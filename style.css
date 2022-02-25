@@ -51,7 +51,7 @@ body {
 .square {
   width: 98px;
   height: 98px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   margin: 2px;
@@ -92,6 +92,10 @@ button:hover {
   color: rgb(84, 146, 228);
 }
 
+.green {
+  color: green;
+}
+
 .message {
   text-align: center;
   color: #fff;
@@ -101,10 +105,11 @@ button:hover {
   font-size: 25px;
   font-weight: bold;
   color: #fff;
-  margin: 30px 0;
+  margin: 30px 0 10px 0;
+  display: none;
 }
 
 .reset-button {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
