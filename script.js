@@ -7,9 +7,6 @@ let turns = 0;
 let gameOver = false;
 let currentBoard = [];
 
-// const red = "rgb(235, 106, 106)";
-// const blue = "rgb(84, 146, 228)";
-
 // arrays of winning combinations
 const winningCombinations = [
   [0, 1, 2],
@@ -45,6 +42,9 @@ board.addEventListener("click", (e) => {
     checkForWinner();
   }
 });
+
+// add event listener to reset button
+resetBtn.addEventListener("click", reset);
 
 //check winner from current board
 function checkForWinner() {
@@ -85,6 +85,7 @@ function checkForWinner() {
   });
 }
 
+// reset game
 function reset() {
   turns = 0;
   gameOver = false;
@@ -99,7 +100,5 @@ function reset() {
     square.classList.remove("green");
   });
 }
-
-resetBtn.addEventListener("click", reset);
 
 reset();
