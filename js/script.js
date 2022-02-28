@@ -33,10 +33,12 @@ board.addEventListener("click", (e) => {
       e.target.innerHTML = "X";
       e.target.classList.add("player-one");
       currentBoard[e.target.dataset.squareId] = "X";
+      message.innerHTML = "Player Two's Turn: 𝕆";
     } else {
       e.target.innerHTML = "O";
       e.target.classList.add("player-two");
       currentBoard[e.target.dataset.squareId] = "O";
+      message.innerHTML = "Player One's Turn: 𝕏";
     }
     turns++;
     checkForWinner();
@@ -68,10 +70,12 @@ function checkForWinner() {
     function winner() {
       gameOver = true;
       squares.forEach((square) => {
+        console.log(square.dataset.squareId);
+        console.log(combination);
         if (
-          square.dataset.squareId == combination[0] ||
-          square.dataset.squareId == combination[1] ||
-          square.dataset.squareId == combination[2]
+          Number(square.dataset.squareId) === combination[0] ||
+          Number(square.dataset.squareId) === combination[1] ||
+          Number(square.dataset.squareId) === combination[2]
         ) {
           square.classList.add("green");
         }
