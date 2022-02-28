@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#753682), to(#bf2e34));
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  height: 100vh;
+  color: #333 !important;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+  width: 506px;
+  padding: 50px 0 80px;
+  margin: 25px auto;
+  -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0 15px 0;
+  letter-spacing: 1px;
+}
+
+.container .board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 306px;
+  height: 306px;
+  margin: 20px auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .board .square {
+  width: 98px;
+  height: 98px;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin: 2px;
+  font-size: 50px;
+  line-height: 98px;
+  cursor: pointer !important;
+}
+
+.container .board .square:hover {
+  background-color: white;
+}
+
+.container .board .player-one {
+  color: #eb6a6a;
+}
+
+.container .board .player-two {
+  color: #5492e4;
+}
+
+.container .board .green {
+  color: green;
+}
+
+.container .message {
+  color: #fff;
+}
+
+.container .game-over {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  margin: 30px 0 10px 0;
+  display: none;
+}
+
+.container .reset-button {
+  margin-top: 20px;
+}
+
+.container .reset-button button {
+  border-radius: 5px;
+  width: 100px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  background-color: #c7365f;
+  letter-spacing: 2px;
+}
+
+.container .reset-button button:hover {
+  background-color: #fff;
+  color: #c7365f;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=style.css.map */
