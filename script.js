@@ -1,3 +1,4 @@
+const board = document.querySelector(".board");
 const message = document.querySelector(".message");
 const gameover = document.querySelector(".game-over");
 const resetBtn = document.querySelector("#reset");
@@ -6,8 +7,8 @@ let turns = 0;
 let gameOver = false;
 let currentBoard = [];
 
-const red = "rgb(235, 106, 106)";
-const blue = "rgb(84, 146, 228)";
+// const red = "rgb(235, 106, 106)";
+// const blue = "rgb(84, 146, 228)";
 
 // arrays of winning combinations
 const winningCombinations = [
@@ -21,29 +22,28 @@ const winningCombinations = [
   [2, 4, 6],
 ];
 
-const squares = document.querySelectorAll(".square");
+// const squares = document.querySelectorAll(".square");
+const squares = Array.from(document.querySelectorAll(".square"));
 
-// add event listener to squares
-squares.forEach((square) => {
-  square.addEventListener("click", (e) => {
-    if (gameOver) {
-      return;
-    }
-    if (e.target.innerHTML !== "") return;
+// add event listener to board
+board.addEventListener("click", (e) => {
+  if (
+    e.target.classList.contains("square") &&
+    e.target.innerHTML === "" &&
+    !gameOver
+  ) {
     if (turns % 2 === 0) {
-      message.innerHTML = "Player Two's Turn: 𝕆";
-      e.target.classList.add("player-one");
       e.target.innerHTML = "X";
+      e.target.classList.add("player-one");
       currentBoard[e.target.dataset.squareId] = "X";
     } else {
-      message.innerHTML = "Player One's Turn: 𝕏";
-      e.target.classList.add("player-two");
       e.target.innerHTML = "O";
+      e.target.classList.add("player-two");
       currentBoard[e.target.dataset.squareId] = "O";
     }
     turns++;
     checkForWinner();
-  });
+  }
 });
 
 //check winner from current board
@@ -90,6 +90,7 @@ function reset() {
   gameOver = false;
   currentBoard = [];
   gameover.style.display = "none";
+  message.innerHTML = "Player One's Turn: 𝕏";
 
   squares.forEach((square) => {
     square.innerHTML = "";
